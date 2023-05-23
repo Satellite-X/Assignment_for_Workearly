@@ -18,5 +18,5 @@ Percentage dataframe is calculated based on the divison of "total sum per store"
 so that a new plot can be created, showing the percentage of sales per store.
 
 Next, two graphs are created, based on previous dataframes,
-one with random colors and one with Hexagon marker.
+one with random colors and one with Hexagon marker..
 
