@@ -10,7 +10,6 @@ data = data.astype({"zip_code": int})
 
 popular_per_zip = data.groupby(["zip_code","item_description"])["bottles_sold"].max().sort_values(ascending=False)
 popular = pd.DataFrame(popular_per_zip).reset_index()
-print([popular])
 
 percentage = data.groupby("store_number")["sale_dollars"].sum()
 temp_total = data.agg({"sale_dollars":sum})
