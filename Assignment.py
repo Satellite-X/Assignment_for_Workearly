@@ -22,6 +22,7 @@ plt.title("Bottles sold per zip code")
 plt.xlabel("Zip code")
 plt.ylabel("Bottles Sold")
 plt.show()
+
 plt.plot(percentage_per_store["store_number"], percentage_per_store["sale_dollars"],'H')
 plt.title("Percentage of Sales per store")
 plt.xlabel("Store Number")
