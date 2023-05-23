@@ -8,8 +8,9 @@ temp_data["date"] = pd.to_datetime(temp_data["date"])
 data = temp_data.loc[(temp_data["date"] >= "2016-01-01") & (temp_data["date"] < "2019-12-31")]
 data = data.astype({"zip_code": int})
 
-popular_per_zip = data.groupby(["zip_code"])["bottles_sold"].sum().sort_values(ascending=False)
+popular_per_zip = data.groupby(["zip_code","item_description"])["bottles_sold"].max().sort_values(ascending=False)
 popular = pd.DataFrame(popular_per_zip).reset_index()
+print([popular])
 
 percentage = data.groupby("store_number")["sale_dollars"].sum()
 temp_total = data.agg({"sale_dollars":sum})
